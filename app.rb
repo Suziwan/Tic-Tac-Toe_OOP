@@ -1,14 +1,14 @@
 require 'bundler'
 Bundler.require
 
-require_relative 'lib/run/player'
-require_relative 'lib/run/game'
-require_relative 'lib/run/board'
-# require_relative 'lib/run/board_case'
+require_relative 'src/player'
+require_relative 'src/game'
 
-# require_relative 'lib/org/show'
-# require_relative 'lib/org/appli'
 
-game = Game.new
-#game.start_game
-game.choice_player2
+player_a = Player.new('joe', 'x')
+player_b = Player.new('taxi', 'o')
+
+game = Game.new(player_a, player_b)
+
+
+game.start()
