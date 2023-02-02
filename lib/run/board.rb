@@ -15,17 +15,13 @@
 #require_relative 'board_case'
 
 class Board
-   attr_accessor :board
+  attr_accessor :board
 
-   def initialize
+  def initialize
     @board = [" "," "," "," "," "," "," "," "," "]
+  end
 
-     #9.times do |i|
-     #@board << Board_case.new("case#{i+1}").value
-     #end
-   end  
-
-   def display_board
+  def display_board
     puts "   A     B     C"
     puts "      |     |     "
     puts "1  #{board[0]}  |  #{board[1]}  |  #{board[2]}  "
@@ -36,9 +32,10 @@ class Board
     puts "      |     |     "
     puts "3  #{board[6]}  |  #{board[7]}  |  #{board[8]}  "
     puts "      |     |     "
-    end
+  end
+
+  def modify_board
+    
+  end
+
 end
-
-display = Board.new
-display.display_board
-
