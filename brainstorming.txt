@@ -1,0 +1,70 @@
+What is the name of player 1 ? ___ (gets.chomp)
+What is the name of player 2 ? ___ (gets:chomp)
+
+Condition (while or if) to verify if array is not empty = end of game
+Condition 2 : check at any moment if we have a column, raw or diagonal full of X or O
+use an hash (letter, number) 
+X win (method):
+=> if all same_letters = X (X win)
+=> if all same_numbers = X (X win)
+=> if hash(A, 1) = X and hash(B, 2) = X and hash(C, 3) = X (X win)
+=> if hash(C, 1) = X and hash(B, 2) = X and hash(A, 3) = X (X win)
+O win (method):
+=> if all same_letters = O (O win)
+=> if all same_numbers = O (O win)
+=> if hash(A, 1) = O and hash(B, 2) = O and hash(C, 3) = O (O win)
+=> if hash(C, 1) = O and hash(B, 2) = O and hash(A, 3) = O (O win)
+
+victoire = [[board[0], board[1], board[2]], [board[3], board[4], board[5]], [board[6], board[7], board[8]],
+[board[0], board[3], board[6]], [board[1], board[4], board[7]], [board[2], board[5], board[8]]
+[board[0], board[4], board[8]], [board[2], board[4], board[6]]]
+
+Initial board :
+
+   A     B     C
+      |     |     
+1     |     |     
+ _____|_____|_____
+      |     |     
+2     |     |     
+ _____|_____|_____
+      |     |     
+3     |     |     
+      |     |     
+
+It's "Player 1" turn, you have the crosses (X), choose a case :
+=> A1 (create an array/hash with each choice)
+hash(A, 1) => board[0] replace by X
+B, 1 => board[1]
+C, 1 => board[2]
+A, 2 => board[3]
+B, 2 => board[4]
+C, 2 => board[5]
+A, 3 => board[6]
+B, 3 => board[7]
+C, 3 => board[8]
+
+   A     B     C
+      |     |     
+1  X  |     |     
+ _____|_____|_____
+      |     |     
+2     |     |     
+ _____|_____|_____
+      |     |     
+3     |     |     
+      |     |     
+
+It's "Player 2" turn, you have the noughts (O), choose a case :
+=> B1
+
+   A     B     C
+      |     |     
+1  X  |  O  |     
+ _____|_____|_____
+      |     |     
+2     |     |     
+ _____|_____|_____
+      |     |     
+3     |     |     
+      |     |     

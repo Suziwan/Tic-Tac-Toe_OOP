@@ -11,10 +11,34 @@
 # des BoardCases (de " " à "x" ou "o") et vérifie en fonction de la combinaison des BoardCases si la partie 
 # est finie (= un joueur a gagné ou bien les 9 cases sont remplies sans vainqueur).
 
-require_relative 'game'
-require_relative 'board_case'
+#require_relative 'game'
+#require_relative 'board_case'
 
 class Board
    attr_accessor :board
 
+   def initialize
+    @board = [" "," "," "," "," "," "," "," "," "]
+
+     #9.times do |i|
+     #@board << Board_case.new("case#{i+1}").value
+     #end
+   end  
+
+   def display_board
+    puts "   A     B     C"
+    puts "      |     |     "
+    puts "1  #{board[0]}  |  #{board[1]}  |  #{board[2]}  "
+    puts " _____|_____|_____"
+    puts "      |     |     "
+    puts "2  #{board[3]}  |  #{board[4]}  |  #{board[5]}  "
+    puts " _____|_____|_____"
+    puts "      |     |     "
+    puts "3  #{board[6]}  |  #{board[7]}  |  #{board[8]}  "
+    puts "      |     |     "
+    end
 end
+
+display = Board.new
+display.display_board
+
