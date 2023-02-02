@@ -12,3 +12,10 @@
 # s'occupe de finir la partie si un joueur a gagné et propose aux joueurs de faire une nouvelle partie 
 # ensuite.
 
+require_relative 'board'
+require_relative 'player'
+
+class Game
+    attr_accessor :board, :player1, :player2
+
+end

@@ -5,3 +5,9 @@
 # et son contenu (Soit elle est vide, soit elle a comme valeur le string "x", soit elle a comme 
 # valeur le string "o").
 
+class BoardCase 
+    attr_accessor :case, :value, :name
+    
+    def initialize(case_name)
+    end
+end

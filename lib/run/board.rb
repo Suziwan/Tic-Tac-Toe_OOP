@@ -10,3 +10,11 @@
 # Méthodes : le Board va s'occuper de faire le lien entre les BoardCases et le Game : il change les valeurs 
 # des BoardCases (de " " à "x" ou "o") et vérifie en fonction de la combinaison des BoardCases si la partie 
 # est finie (= un joueur a gagné ou bien les 9 cases sont remplies sans vainqueur).
+
+require_relative 'game'
+require_relative 'board_case'
+
+class Board
+   attr_accessor :board
+
+end
