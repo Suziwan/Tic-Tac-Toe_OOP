@@ -1,2 +1,2 @@
 # Tic-Tac-Toe_OOP
-Tic-tac-toe game (morpion in French) in OOP
+Tic-tac-toe game in OOP
