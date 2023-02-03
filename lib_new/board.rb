@@ -1,9 +1,10 @@
 class Board
-
   EMPTY = ' '
 
     def initialize
       @board = [[EMPTY, EMPTY, EMPTY], [EMPTY, EMPTY, EMPTY], [EMPTY, EMPTY, EMPTY]] 
+      # x =>   -----------0----------, -----------1---------, -----------2----------
+      # y =>   ---0---,---1---,---2-- ---0---,---1---,---2-- ---0---,---1---,---2---
     end
 
     def update_cell(x, y, symbol)

@@ -36,8 +36,8 @@ class Game
     puts "#{player.name}, choose your next move : "
     print "> "
     input = gets.chomp
+    col = input.size < 2 ? '' : @column_mapping.fetch(input[0], '')
     line = input.size < 2 ? '' : @line_mapping.fetch(input[1], '')
-    col = input.size <  2 ? '' : @column_mapping.fetch(input[0], '')
 
     if !line.is_a?(Numeric) || !col.is_a?(Numeric) || !@board.update_cell(line.to_i, col.to_i, player.symbol) 
       puts "Wrong input, try again"
