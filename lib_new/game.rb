@@ -52,4 +52,11 @@ class Game
   def display_board
     puts @board.state
   end
+
+  # def restart
+  #   puts "Do you want to play again ?"
+  #   print "> "
+  #   answer = gets.chomp
+  #   return true if answer == "yes" || answer == "Yes" || answer = "y"
+  # end 
 end
