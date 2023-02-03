@@ -17,7 +17,7 @@ class Game
       break if play_turn(@player_b)
     end
 
-    end_message = "Draw"
+    end_message = "It's a draw !"
     [@player_a, @player_b].each do |player|
       end_message = "#{player.name} won !" if won?(player)
     end
