@@ -6,7 +6,7 @@ class Game
     @player_b = player_b
     @board = Board.new
 
-    @column_mapping = {'A'=> 0, 'B'=> 1, 'C'=> 2}
+    @column_mapping = {'A'=> 0, 'B'=> 1, 'C'=> 2, 'a'=> 0, 'b'=> 1, 'c'=> 2}
     @line_mapping = {'1'=> 0, '2'=> 1, '3'=> 2}  
   end
 
@@ -19,7 +19,7 @@ class Game
 
     end_message = "It's a draw !"
     [@player_a, @player_b].each do |player|
-      end_message = "#{player.name} won !" if won?(player)
+      end_message = "Congratulations #{player.name}! You won =D \n" if won?(player)
     end
 
     puts end_message
@@ -52,11 +52,4 @@ class Game
   def display_board
     puts @board.state
   end
-
-  # def restart
-  #   puts "Do you want to play again ?"
-  #   print "> "
-  #   answer = gets.chomp
-  #   return true if answer == "yes" || answer == "Yes" || answer = "y"
-  # end 
 end
