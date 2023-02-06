@@ -15,7 +15,6 @@ loop do
   puts "Do you want to play again ?"
   print "> "
   answer = gets.chomp.downcase
-  break if answer != "yes"
+  break if answer != 'yes' && answer != 'y'
   system "clear"
 end
-
